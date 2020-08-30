@@ -21,6 +21,11 @@ public class App {
 		
 		logger.info(footballCoach.getFortune());
 		
+		Coach footballCoach2 = applicationContext.getBean("footballCoach", Coach.class);
+		
+		/** Test Bean scopes **/
+		logger.info("is the same object: " + (footballCoach == footballCoach2));
+		
 		// clean up
 		applicationContext.close();
 		
