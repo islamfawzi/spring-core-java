@@ -26,6 +26,12 @@ public class App {
 		/** Test Bean scopes **/
 		logger.info("is the same object: " + (footballCoach == footballCoach2));
 		
+		
+		/** inject BasketBallCoach Bean **/
+		Coach basketBallCoach = applicationContext.getBean("basketBallCoach", Coach.class);
+		
+		logger.info(basketBallCoach.getFortune());
+		
 		// clean up
 		applicationContext.close();
 		

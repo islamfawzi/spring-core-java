@@ -26,5 +26,15 @@ public class SportConfig {
 		/** constructor injection **/
 		return new FootballCoach(fortuneService());
 	}
+	
+	@Bean
+	public BasketBallCoach basketBallCoach() {
+		BasketBallCoach basketBallCoach = new BasketBallCoach();
+		
+		/** setter injection **/
+		basketBallCoach.setFortuneService(fortuneService());
+		
+		return basketBallCoach; 
+	}
 
 }
